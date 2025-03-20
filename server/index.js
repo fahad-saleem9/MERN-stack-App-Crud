@@ -10,6 +10,13 @@ app.use(express.json());
 
 // Routes
 app.use("/api/website/enquiry", enquiryRouter);
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
+
 
 
 mongoose
